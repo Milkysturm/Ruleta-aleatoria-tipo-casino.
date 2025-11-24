@@ -1,0 +1,139 @@
+@font-face {
+    font-family: 'Catboo';
+    src: url('Catboo.ttf') format('truetype');
+}
+
+/* GENERAL */
+body {
+    margin: 0;
+    height: 100vh;
+
+    background-image: url('fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'Catboo', sans-serif;
+    color: rgb(255, 101, 178);
+    
+}
+
+.container {
+    text-align: center;
+}
+
+/* Título */
+.titulo {
+    font-size: 42px;
+    margin-bottom: 120px;
+    text-shadow: 3px 3px 0px #000000;
+    margin-top: 30px;
+}
+
+/* ==== LAYOUT EN DOS COLUMNAS ==== */
+.main-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;           /* separación entre resultado y ruleta */
+}
+
+/* Columna resultado */
+.result-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#winnerBig {
+    font-size: 300px;
+    height: 130px;
+    width: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 60px;
+    filter: 0 0 20px rgba(255, 0, 140, 0.8);
+    transition: transform 0.3s ease;
+}
+
+#result {
+    font-size: 22px;
+}
+
+/* Columna ruleta */
+.roulette-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.arrow {
+    font-size: 40px;
+    margin-bottom: 8px;
+}
+
+/* RULETA */
+.wheel {
+    width: 320px;
+    height: 320px;
+    border: 8px solid rgba(247, 116, 149, 0.9);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    background: rgba(28, 131, 134, 0.35);
+    backdrop-filter: blur(4px);
+
+    
+    transition: transform 4s cubic-bezier(.17,.67,.83,.67);
+}
+
+.emoji {
+    position: absolute;
+    font-size: 40px;
+}
+
+/* 8 posiciones exactas */
+.emoji:nth-child(1) { transform: rotate(0deg) translateY(-130px); }
+.emoji:nth-child(2) { transform: rotate(45deg) translateY(-130px); }
+.emoji:nth-child(3) { transform: rotate(90deg) translateY(-130px); }
+.emoji:nth-child(4) { transform: rotate(135deg) translateY(-130px); }
+.emoji:nth-child(5) { transform: rotate(180deg) translateY(-130px); }
+.emoji:nth-child(6) { transform: rotate(225deg) translateY(-130px); }
+.emoji:nth-child(7) { transform: rotate(270deg) translateY(-130px); }
+.emoji:nth-child(8) { transform: rotate(315deg) translateY(-130px); }
+
+/* BOTÓN */
+button {
+    margin-top: 20px;
+    padding: 12px 26px;
+    font-size: 22px;
+    font-family: 'Catboo';
+    background: rgba(255, 111, 190, 0.95);
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+button:hover {
+    transform: scale(1.1);
+    
+}
+
+/* Un poquito más amigable en pantallas pequeñas */
+@media (max-width: 768px) {
+    .main-wrapper {
+        flex-direction: column;
+        gap: 30px;
+    }
+}

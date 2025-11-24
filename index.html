@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruleta de Animales</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Layout en 2 columnas -->
+    <div class="main-wrapper">
+
+        <!-- Columna resultado -->
+        <div class="result-panel">
+            <h1 class="titulo">RULETA DE ANIMALES</h1>
+            <div id="winnerBig"></div>
+            <div id="result"></div>
+        </div>
+
+        <!-- Columna ruleta -->
+        <div class="roulette-panel">
+            <div class="arrow">▼</div>
+
+            <div class="wheel" id="wheel">
+                <div class="emoji">🐘</div>
+                <div class="emoji">🦒</div>
+                <div class="emoji">🦁</div>
+                <div class="emoji">🐻</div>
+                <div class="emoji">🐵</div>
+                <div class="emoji">🐱</div>
+                <div class="emoji">🦋</div>
+                <div class="emoji">🐢</div>
+            </div>
+
+            <button id="spinBtn">GIRAR</button>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+
